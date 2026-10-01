@@ -1,0 +1,9 @@
+<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Waffiy — retrouver ma carte</title><p>Ouverture de Waffiy…</p><a href="/waffiy-web/">Revenir à Waffiy</a><script>
+const base="/waffiy-web", routes={"card":["card","merchantId"],"unlock":["unlock","programId"],"customer":["customer","clientId"],"scanned":["scanned","clientCode"],"reward":["reward","clientCode"],"programs":["programs/edit","id"]};
+const path=location.pathname.slice(base.length).replace(/^\/+|\/+$/g,'').split('/');
+const match=routes[path[0]];
+if(match && path.length===2 && /^[a-zA-Z0-9-]{8,64}$/.test(path[1])) {
+ const query=new URLSearchParams(location.search);query.set(match[1],path[1]);
+ location.replace(base+'/'+match[0]+'/?'+query.toString()+location.hash);
+} else { document.querySelector('p').textContent='Cette page est introuvable.'; }
+</script></html>

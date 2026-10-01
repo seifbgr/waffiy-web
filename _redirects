@@ -1,0 +1,6 @@
+/waffiy-web/card/:value /waffiy-web/card/?merchantId=:value 302
+/waffiy-web/unlock/:value /waffiy-web/unlock/?programId=:value 302
+/waffiy-web/customer/:value /waffiy-web/customer/?clientId=:value 302
+/waffiy-web/scanned/:value /waffiy-web/scanned/?clientCode=:value 302
+/waffiy-web/reward/:value /waffiy-web/reward/?clientCode=:value 302
+/waffiy-web/programs/:value /waffiy-web/programs/edit/?id=:value 302
